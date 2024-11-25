@@ -17,5 +17,5 @@ Artisan::command('delete_api_logs', function () {
 // invalidate cache every hour
 Artisan::command('invalidate_cache', function () {
     $this->info('Invalidating cache');
-    Cache::forget('external_api_data');
+    Cache::forget('weather_data_*');
 })->purpose('Invalidate cache')->hourly();
